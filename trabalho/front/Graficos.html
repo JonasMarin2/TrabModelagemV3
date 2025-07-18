@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="graficos.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Visualização de Gráficos</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Página Inicial</a>
+      <a href="Usuario.html">Usuários</a>
+      <a href="Produtos.html">Produtos</a>
+      <a href="Compras.html">Compras</a>
+      <a href="Graficos.html">Gráficos</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Filtros por ID -->
+    <section>
+      <input type="number" id="startId" placeholder="ID Inicial" />
+      <input type="number" id="endId" placeholder="ID Final" />
+      <button id="gerarGraficos">Mostrar Gráficos</button>
+    </section>
+
+    <!-- Gráfico de Produtos -->
+    <section>
+      <h1>Estoque por Produto</h1>
+      <canvas id="productChart"></canvas>
+    </section>
+
+    <!-- Gráfico de Usuários -->
+    <section>
+      <h1>Faixa Etária de Usuários</h1>
+      <canvas id="userChart"></canvas>
+    </section>
+  </main>
+</body>
+</html>

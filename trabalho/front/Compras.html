@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="compras.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Painel de Compras</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Página Inicial</a>
+      <a href="Usuario.html">Usuários</a>
+      <a href="Produtos.html">Produtos</a>
+      <a href="Compras.html">Compras</a>
+      <a href="Graficos.html">Visualizar Gráficos</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Área de Compras</h1>
+
+    <section>
+      <h2>Cadastro de Compras</h2>
+      <form id="produto-form">
+        <label for="quant">Qtd de Itens:</label>
+        <input type="number" id="quant" name="quant" required />
+
+        <label for="date">Data da Compra:</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="price">Valor (R$):</label>
+        <input type="number" id="price" name="price" step="0.01" required />
+
+        <label for="discountPercentage">Desconto %:</label>
+        <input type="number" id="discountPercentage" name="discountPercentage" required placeholder="ex: 15" />
+
+        <label for="paymentWay">Pagamento:</label>
+        <input type="text" id="paymentWay" name="paymentWay" required />
+
+        <label for="status">Situação Atual:</label>
+        <input type="text" id="status" name="status" required />
+
+        <button type="submit" id="cadastrar">Registrar Compra</button>
+      </form>
+      <div id="res"></div>
+    </section>
+
+    <section>
+      <h2>Compras Cadastradas</h2>
+      <table id="produtos-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Qtd</th>
+            <th>Data</th>
+            <th>Preço</th>
+            <th>Desc. (%)</th>
+            <th>Total c/ Desc.</th>
+            <th>Pagamento</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Os dados aparecerão aqui -->
+        </tbody>
+      </table>
+      <button type="button" id="listar">Exibir Compras</button>
+    </section>
+
+    <section>
+      <h2>Editar Informações</h2>
+      <form id="produto-form-update">
+        <label for="id">ID da Compra:</label>
+        <input type="number" id="id" name="id" required />
+
+        <label for="quant2">Nova Quantidade:</label>
+        <input type="number" id="quant2" name="quant" required />
+
+        <label for="date2">Nova Data:</label>
+        <input type="date" id="date2" name="date" required />
+
+        <label for="price2">Novo Preço:</label>
+        <input type="number" id="price2" name="price" step="0.01" required />
+
+        <label for="discountPercentage2">Desconto Atualizado:</label>
+        <input type="number" id="discountPercentage2" name="discountPercentage" required />
+
+        <label for="paymentWay2">Forma Atual:</label>
+        <input type="text" id="paymentWay2" name="paymentWay" required />
+
+        <label for="status2">Novo Status:</label>
+        <input type="text" id="status2" name="status" required />
+
+        <button type="submit" id="atualizar">Atualizar Dados</button>
+      </form>
+      <div id="res2"></div>
+    </section>
+
+    <section>
+      <h2>Remover Compra</h2>
+      <form id="produto-form-delete">
+        <label for="id">Código da Compra:</label>
+        <input type="number" id="id3" name="id" required />
+        <button type="submit" id="apagar">Remover</button>
+      </form>
+      <div id="res3"></div>
+    </section>
+  </main>
+</body>
+</html>
